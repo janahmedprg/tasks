@@ -7,11 +7,15 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/bad-components/ChooseTeam.test.tsx
+PASS src/bad-components/DoubleHalf.test.tsx
 PASS src/functions.test.ts
 PASS src/components/ChangeType.test.tsx
 PASS src/components/CycleHoliday.test.tsx
 PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
+PASS src/bad-components/ColoredBox.test.tsx
+PASS src/bad-components/ShoveBox.test.tsx
 FAIL src/text.test.tsx
   ● renders the text 'Hello World' somewhere
 
@@ -28,6 +32,173 @@ FAIL src/text.test.tsx
           [36m>[39m
             [0mUD CISC275 with React Hooks and TypeScript[0m
           [36m</header>[39m
+          [36m<hr />[39m
+          [36m<div>[39m
+            [36m<h3>[39m
+              [0mDouble Half[0m
+            [36m</h3>[39m
+            [36m<div>[39m
+              [0mThe current value is: [0m
+              [36m<span>[39m
+                [0m10[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mDouble[0m
+            [36m</button>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mHalve[0m
+            [36m</button>[39m
+          [36m</div>[39m
+          [36m<hr />[39m
+          [36m<div>[39m
+            [36m<h3>[39m
+              [0mChoose Team[0m
+            [36m</h3>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"row"[39m
+            [36m>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mAlan Turing[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mGrace Hopper[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mAda Lovelace[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mCharles Babbage[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mBarbara Liskov[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+                [36m<div[39m
+                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                [36m>[39m
+                  [0mAdd[0m
+                  [0m [0m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mMargaret Hamilton[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"col"[39m
+              [36m>[39m
+                [36m<strong>[39m
+                  [0mTeam:[0m
+                [36m</strong>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mClear Team[0m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<hr />[39m
+          [36m<div>[39m
+            [36m<h3>[39m
+              [0mColored Box[0m
+            [36m</h3>[39m
+            [36m<span>[39m
+              [0mThe current color is: [0m
+              [0mred[0m
+            [36m</span>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mNext Color[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mdata-testid[39m=[32m"colored-box"[39m
+                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: red; display: inline-block; vertical-align: bottom; margin-left: 5px;"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<hr />[39m
+          [36m<div>[39m
+            [36m<h3>[39m
+              [0mShove Box[0m
+            [36m</h3>[39m
+            [36m<span>[39m
+              [0mThe box is at: [0m
+              [0m10[0m
+            [36m</span>[39m
+            [36m<div>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"btn btn-primary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mShove the Box[0m
+              [36m</button>[39m
+              [36m<div[39m
+                [33mdata-testid[39m=[32m"moveable-box"[39m
+                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: lightblue; border: 1px solid blue; display: inline-block; vertical-align: bottom; margin-left: 10px;"[39m
+              [36m/>[39m
+            [36m</div>[39m
+          [36m</div>[39m
           [36m<hr />[39m
           [36m<span>[39m
             [36m<button[39m
@@ -157,30 +328,35 @@ FAIL src/text.test.tsx
       at Object.<anonymous> (src/text.test.tsx:7:26)
 
 PASS src/App.test.tsx
--------------------|---------|----------|---------|---------|-------------------
-File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
--------------------|---------|----------|---------|---------|-------------------
-All files          |     100 |    98.71 |     100 |     100 |                   
- src               |     100 |    98.43 |     100 |     100 |                   
-  App.tsx          |     100 |      100 |     100 |     100 |                   
-  arrays.ts        |     100 |      100 |     100 |     100 |                   
-  functions.ts     |     100 |      100 |     100 |     100 |                   
-  nested.ts        |     100 |      100 |     100 |     100 |                   
-  objects.ts       |     100 |    91.66 |     100 |     100 | 51                
- src/components    |     100 |      100 |     100 |     100 |                   
-  ChangeType.tsx   |     100 |      100 |     100 |     100 |                   
-  Counter.tsx      |     100 |      100 |     100 |     100 |                   
-  CycleHoliday.tsx |     100 |      100 |     100 |     100 |                   
-  RevealAnswer.tsx |     100 |      100 |     100 |     100 |                   
-  StartAttempt.tsx |     100 |      100 |     100 |     100 |                   
-  TwoDice.tsx      |     100 |      100 |     100 |     100 |                   
- src/interfaces    |       0 |        0 |       0 |       0 |                   
-  answer.ts        |       0 |        0 |       0 |       0 |                   
-  question.ts      |       0 |        0 |       0 |       0 |                   
--------------------|---------|----------|---------|---------|-------------------
+--------------------|---------|----------|---------|---------|-------------------
+File                | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------|---------|----------|---------|---------|-------------------
+All files           |     100 |     97.5 |     100 |     100 |                   
+ src                |     100 |    98.43 |     100 |     100 |                   
+  App.tsx           |     100 |      100 |     100 |     100 |                   
+  arrays.ts         |     100 |      100 |     100 |     100 |                   
+  functions.ts      |     100 |      100 |     100 |     100 |                   
+  nested.ts         |     100 |      100 |     100 |     100 |                   
+  objects.ts        |     100 |    91.66 |     100 |     100 | 51                
+ src/bad-components |     100 |       50 |     100 |     100 |                   
+  ChooseTeam.tsx    |     100 |       50 |     100 |     100 | 18                
+  ColoredBox.tsx    |     100 |      100 |     100 |     100 |                   
+  DoubleHalf.tsx    |     100 |      100 |     100 |     100 |                   
+  ShoveBox.tsx      |     100 |      100 |     100 |     100 |                   
+ src/components     |     100 |      100 |     100 |     100 |                   
+  ChangeType.tsx    |     100 |      100 |     100 |     100 |                   
+  Counter.tsx       |     100 |      100 |     100 |     100 |                   
+  CycleHoliday.tsx  |     100 |      100 |     100 |     100 |                   
+  RevealAnswer.tsx  |     100 |      100 |     100 |     100 |                   
+  StartAttempt.tsx  |     100 |      100 |     100 |     100 |                   
+  TwoDice.tsx       |     100 |      100 |     100 |     100 |                   
+ src/interfaces     |       0 |        0 |       0 |       0 |                   
+  answer.ts         |       0 |        0 |       0 |       0 |                   
+  question.ts       |       0 |        0 |       0 |       0 |                   
+--------------------|---------|----------|---------|---------|-------------------
 
-Test Suites: 1 failed, 11 passed, 12 total
-Tests:       1 failed, 93 passed, 94 total
+Test Suites: 1 failed, 15 passed, 16 total
+Tests:       1 failed, 110 passed, 111 total
 Snapshots:   0 total
-Time:        7.466 s
+Time:        11.214 s
 Ran all test suites.
