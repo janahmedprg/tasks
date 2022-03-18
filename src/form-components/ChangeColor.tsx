@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import { ColoredBox } from "../bad-components/ColoredBox";
 
 const colors = [
     "red",
