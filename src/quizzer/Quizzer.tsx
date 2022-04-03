@@ -7,6 +7,8 @@ import { TakeQuiz } from "./QuizComponents/takeQuiz";
 import { Button } from "react-bootstrap";
 import { EditQuiz } from "./QuizComponents/editQuiz";
 import { NewQuiz } from "./QuizComponents/newQuiz";
+import { Container, Row, Col } from "react-bootstrap";
+import sketch from "./sketch.jpg";
 
 const QUIZ_DATA: Quiz[] = quizData.map(
     (q): Quiz => ({
@@ -88,6 +90,42 @@ export function Quizzer(): JSX.Element {
             {view === 3 && (
                 <NewQuiz setQuizzes={setQuizzes} setView={setView} />
             )}
+            <hr></hr>
+            <h4>Checklist and Sketch</h4>
+            <Container>
+                <Row>
+                    <Col>
+                        <ul>
+                            <li>Users can see quizzes: Done </li>
+                            <li>Users can select specific quiz: Done </li>
+                            <li>
+                                Questions in quiz can be of at least two types:
+                                Done
+                            </li>
+                            <li>
+                                Users enter or choose an answer for a quiz
+                                question and are told if they are correct: Done
+                            </li>
+                            <li>Users see total points: Done</li>
+                            <li>Users can clear out answers: Done</li>
+                            <li>
+                                Users can publish or unpulish a question: Done
+                            </li>
+                            <li>
+                                Users can filter the questions based on the
+                                published status: Done
+                            </li>
+                            <li>Users can edit the questions: </li>
+                            <li>Users can add a new quiz question: </li>
+                            <li>Users can delete an existing quiz question:</li>
+                            <li>Users can reorder quiz questions: </li>
+                            <li>Users can add a new quiz: </li>
+                            <li>Useers can delete an existing quiz: </li>
+                        </ul>
+                    </Col>
+                </Row>
+            </Container>
+            <img src={sketch} alt="Sketch" />
         </div>
     );
 }

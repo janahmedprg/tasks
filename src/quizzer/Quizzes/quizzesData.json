@@ -55,8 +55,8 @@
                 "id": 1,
                 "name": "Question 2",
                 "body": "How do you say 'School' in German?",
-                "type": "multiple_choice_question",
-                "options": ["der Schule", "die Schule", "das Skul"],
+                "type": "short_answer_question",
+                "options": [],
                 "expected": "die Schule",
                 "points": 2,
                 "published": true

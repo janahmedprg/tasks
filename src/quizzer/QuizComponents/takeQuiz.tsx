@@ -99,12 +99,14 @@ export function TakeQuiz({
     const POINTS = new Array(takeQuiz.questions.length).fill(0);
     const [points, setPoints] = useState<number[]>(POINTS);
     const [publishedView, setPublishedView] = useState<boolean>(false);
+    const [reset, setReset] = useState<boolean>(true);
     function updatePublishedView(event: React.ChangeEvent<HTMLInputElement>) {
         setPublishedView(event.target.checked);
         setPoints(POINTS);
     }
-    function reset() {
-        setPublishedView(!publishedView);
+    function updateReset() {
+        setReset(!reset);
+        setPoints(POINTS);
     }
     return (
         <div>
@@ -116,7 +118,8 @@ export function TakeQuiz({
                 checked={publishedView}
                 onChange={updatePublishedView}
             />
-            {publishedView === false &&
+            {reset &&
+                publishedView === false &&
                 takeQuiz.questions.map(
                     (question: Question): JSX.Element =>
                         question.type === "multiple_choice_question" ? (
@@ -133,7 +136,46 @@ export function TakeQuiz({
                             ></ShortAnswer>
                         )
                 )}
-            {publishedView === true &&
+            {!reset &&
+                publishedView === false &&
+                takeQuiz.questions.map(
+                    (question: Question): JSX.Element =>
+                        question.type === "multiple_choice_question" ? (
+                            <MultipleChoice
+                                question={question}
+                                points={points}
+                                setPoints={setPoints}
+                            ></MultipleChoice>
+                        ) : (
+                            <ShortAnswer
+                                question={question}
+                                points={points}
+                                setPoints={setPoints}
+                            ></ShortAnswer>
+                        )
+                )}
+            {reset &&
+                publishedView === true &&
+                takeQuiz.questions
+                    .filter((q: Question): boolean => q.published === true)
+                    .map(
+                        (question: Question): JSX.Element =>
+                            question.type === "multiple_choice_question" ? (
+                                <MultipleChoice
+                                    question={question}
+                                    points={points}
+                                    setPoints={setPoints}
+                                ></MultipleChoice>
+                            ) : (
+                                <ShortAnswer
+                                    question={question}
+                                    points={points}
+                                    setPoints={setPoints}
+                                ></ShortAnswer>
+                            )
+                    )}
+            {!reset &&
+                publishedView === true &&
                 takeQuiz.questions
                     .filter((q: Question): boolean => q.published === true)
                     .map(
@@ -160,7 +202,7 @@ export function TakeQuiz({
             )}{" "}
             points
             <p></p>
-            <Button onClick={reset}>Reset</Button>
+            <Button onClick={updateReset}>Reset</Button>
             <p></p>
             <Button onClick={() => setView(0)}>Exit</Button>
         </div>
