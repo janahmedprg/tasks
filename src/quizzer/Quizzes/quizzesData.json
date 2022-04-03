@@ -1,0 +1,86 @@
+[
+    {
+        "id": 0,
+        "title": "Quiz 1: Math",
+        "description": "Simple math problems.",
+        "questions": [
+            {
+                "id": 0,
+                "name": "Question 1",
+                "body": "What is 3+7-(2+6)/2 equal to?",
+                "type": "multiple_choice_question",
+                "options": ["10", "-6", "6"],
+                "expected": "6",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 1,
+                "name": "Questions 2",
+                "body": "What is the median of this list of numbers 5,6,9,23,5,5,6 ?",
+                "type": "multiple_choice_question",
+                "options": ["6", "5", "9"],
+                "expected": "6",
+                "points": 2,
+                "published": true
+            },
+            {
+                "id": 2,
+                "name": "Question 3",
+                "body": "What is the average of this list of numbers 2,6,9,23,5,5,6 ?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "8",
+                "points": 2,
+                "published": false
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "title": "Quiz 2: German",
+        "description": "Simple quiz on german language.",
+        "questions": [
+            {
+                "id": 0,
+                "name": "Question 1",
+                "body": "How do you say 'Good Morning.' in German?",
+                "type": "short_answer_question",
+                "options": [],
+                "expected": "Guten Morgen",
+                "points": 1,
+                "published": true
+            },
+            {
+                "id": 1,
+                "name": "Question 2",
+                "body": "How do you say 'School' in German?",
+                "type": "multiple_choice_question",
+                "options": ["der Schule", "die Schule", "das Skul"],
+                "expected": "die Schule",
+                "points": 2,
+                "published": true
+            },
+            {
+                "id": 2,
+                "name": "Question 3",
+                "body": "What does 'der Krankenwagen' mean in english?",
+                "type": "multiple_choice_question",
+                "options": ["Ambulance", "Crankshaft", "Firetruck"],
+                "expected": "Ambulance",
+                "points": 3,
+                "published": true
+            },
+            {
+                "id": 2,
+                "name": "Question 3",
+                "body": "What does 'der Mittwoch' mean in english?",
+                "type": "multiple_choice_question",
+                "options": ["Wednesday", "Saturday", "Monday"],
+                "expected": "Wednesday",
+                "points": 2,
+                "published": false
+            }
+        ]
+    }
+]
