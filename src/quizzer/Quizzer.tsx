@@ -85,10 +85,20 @@ export function Quizzer(): JSX.Element {
                 <TakeQuiz takeQuiz={quizzes[quizChosen]} setView={setView} />
             )}
             {view === 2 && (
-                <EditQuiz editQuiz={quizzes[quizChosen]} setView={setView} />
+                <EditQuiz
+                    editQ={quizzes[quizChosen]}
+                    quizzes={quizzes}
+                    index={quizChosen}
+                    setQuizzes={setQuizzes}
+                    setView={setView}
+                />
             )}
             {view === 3 && (
-                <NewQuiz setQuizzes={setQuizzes} setView={setView} />
+                <NewQuiz
+                    quizzes={quizzes}
+                    setQuizzes={setQuizzes}
+                    setView={setView}
+                />
             )}
             <hr></hr>
             <h4>Checklist and Sketch</h4>
@@ -115,12 +125,14 @@ export function Quizzer(): JSX.Element {
                                 Users can filter the questions based on the
                                 published status: Done
                             </li>
-                            <li>Users can edit the questions: </li>
-                            <li>Users can add a new quiz question: </li>
-                            <li>Users can delete an existing quiz question:</li>
-                            <li>Users can reorder quiz questions: </li>
-                            <li>Users can add a new quiz: </li>
-                            <li>Useers can delete an existing quiz: </li>
+                            <li>Users can edit the questions: Done</li>
+                            <li>Users can add a new quiz question: Done</li>
+                            <li>
+                                Users can delete an existing quiz question: Done
+                            </li>
+                            <li>Users can reorder quiz questions: Done</li>
+                            <li>Users can add a new quiz: Done</li>
+                            <li>Useers can delete an existing quiz: Done</li>
                         </ul>
                     </Col>
                 </Row>

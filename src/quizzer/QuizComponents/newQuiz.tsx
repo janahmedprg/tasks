@@ -5,9 +5,11 @@ import quizData from "../Quizzes/quizzesData.json";
 import { Button } from "react-bootstrap";
 
 export function NewQuiz({
+    quizzes,
     setQuizzes,
     setView
 }: {
+    quizzes: Quiz[];
     setQuizzes: (newQuiz: Quiz[]) => void;
     setView: (newView: number) => void;
 }): JSX.Element {

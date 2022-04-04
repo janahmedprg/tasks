@@ -28,6 +28,7 @@ export function MultipleChoice({
     return (
         <div>
             <hr></hr>
+            <h5>{question.name}</h5>
             {question.body}
             {question.options.map(
                 (option: string): JSX.Element => (
@@ -74,6 +75,7 @@ export function ShortAnswer({
     return (
         <div>
             <hr></hr>
+            <h5>{question.name}</h5>
             {question.body}
             <Form.Control
                 key={question.id.toString()}
