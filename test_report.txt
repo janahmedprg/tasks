@@ -21,6 +21,7 @@ PASS src/components/Counter.test.tsx
 PASS src/components/RevealAnswer.test.tsx
 PASS src/bad-components/ColoredBox.test.tsx
 PASS src/bad-components/ShoveBox.test.tsx
+PASS src/quizzer/Quizzer.test.tsx
 FAIL src/text.test.tsx
   ● renders the text 'Hello World' somewhere
 
@@ -37,490 +38,127 @@ FAIL src/text.test.tsx
           [36m>[39m
             [0mUD CISC275 with React Hooks and TypeScript[0m
           [36m</header>[39m
-          [36m<hr />[39m
           [36m<div>[39m
             [36m<h3>[39m
-              [0mCheck Answer[0m
+              [0mQuizzer[0m
             [36m</h3>[39m
-            [36m<div[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-              [36m>[39m
-                [0mAnswer:[0m
-              [36m</label>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-control"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [0m❌[0m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mGive Attempts[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-              [36m>[39m
-                [0mAttempts:[0m
-              [36m</label>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-control"[39m
-                [33mtype[39m=[32m"number"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mname[39m=[32m"use"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mUse[0m
-            [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mname[39m=[32m"gain"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mGain[0m
-            [36m</button>[39m
-            [36m<span>[39m
-              [0m3[0m
-            [36m</span>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mEdit Mode[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"form-check form-switch"[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-check-input"[39m
-                [33mtype[39m=[32m"checkbox"[39m
-              [36m/>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-check-label"[39m
-                [33mtitle[39m=[32m""[39m
-              [36m>[39m
-                [0mEdit mode[0m
-              [36m</label>[39m
-            [36m</div>[39m
+            [36m<hr />[39m
             [36m<div>[39m
               [36m<div>[39m
-                [0mYour Name[0m
-                [0m is [0m
-                [0m[0m
-                [0m a student[0m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mChange Color[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: red;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mchecked[39m=[32m""[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"red"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
+                [36m<h4>[39m
+                  [0mSelect a Quiz:[0m
+                [36m</h4>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"quizChooser"[39m
                 [36m>[39m
-                  [0mred[0m
-                [36m</label>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"0"[39m
+                  [36m>[39m
+                    [0mQuiz 1: Math[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1"[39m
+                  [36m>[39m
+                    [0mQuiz 2: German[0m
+                  [36m</option>[39m
+                [36m</select>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: blue;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"blue"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mblue[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: green;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"green"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mgreen[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: orange;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"orange"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0morange[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: purple;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"purple"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mpurple[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: cyan;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"cyan"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mcyan[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: magenta;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"magenta"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mmagenta[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: white;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"white"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mwhite[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: black;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"black"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mblack[0m
-                [36m</label>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [0mYou have chosen[0m
+              [36m<p />[39m
+              [0mDescription: [0m
+              [0mSimple math problems.[0m
+              [36m<p />[39m
+              [0mThe quiz has[0m
               [0m [0m
-              [36m<a[39m
-                [33mdata-testid[39m=[32m"colored-box"[39m
-                [33mstyle[39m=[32m"background-color: red;"[39m
-              [36m>[39m
-                [0m [0m
-                [0mred[0m
-              [36m</a>[39m
+              [0m3[0m
             [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mMultiple Choice Question[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-              [36m>[39m
-                [0mHow do you feel?[0m
-              [36m</label>[39m
-              [36m<select[39m
-                [33mclass[39m=[32m"form-select"[39m
-              [36m>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"a"[39m
-                [36m>[39m
-                  [0ma[0m
-                [36m</option>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"b"[39m
-                [36m>[39m
-                  [0mb[0m
-                [36m</option>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"c"[39m
-                [36m>[39m
-                  [0mc[0m
-                [36m</option>[39m
-              [36m</select>[39m
-            [36m</div>[39m
-            [0m❌[0m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mDouble Half[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [0mThe current value is: [0m
-              [36m<span>[39m
-                [0m10[0m
-              [36m</span>[39m
-            [36m</div>[39m
+            [36m<p />[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mDouble[0m
+              [0mTake Quiz[0m
             [36m</button>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mHalve[0m
+              [0mEdit Quiz[0m
             [36m</button>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mChoose Team[0m
-            [36m</h3>[39m
+            [36m<p>[39m
+              [0mCreate a new Quiz:[0m
+            [36m</p>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mNew Quiz[0m
+            [36m</button>[39m
+            [36m<hr />[39m
+            [36m<h4>[39m
+              [0mChecklist and Sketch[0m
+            [36m</h4>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"row"[39m
+              [33mclass[39m=[32m"container"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"col"[39m
+                [33mclass[39m=[32m"row"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                  [33mclass[39m=[32m"col"[39m
                 [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mAlan Turing[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mGrace Hopper[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mAda Lovelace[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mCharles Babbage[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mBarbara Liskov[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mMargaret Hamilton[0m
-                  [36m</button>[39m
+                  [36m<ul>[39m
+                    [36m<li>[39m
+                      [0mUsers can see quizzes: Done [0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can select specific quiz: Done [0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mQuestions in quiz can be of at least two types: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers enter or choose an answer for a quiz question and are told if they are correct: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers see total points: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can clear out answers: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can publish or unpulish a question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can filter the questions based on the published status: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can edit the questions: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can add a new quiz question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can delete an existing quiz question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can reorder quiz questions: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can add a new quiz: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUseers can delete an existing quiz: Done[0m
+                    [36m</li>[39m
+                  [36m</ul>[39m
                 [36m</div>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"col"[39m
-              [36m>[39m
-                [36m<strong>[39m
-                  [0mTeam:[0m
-                [36m</strong>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mClear Team[0m
-                [36m</button>[39m
-              [36m</div>[39m
             [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mColored Box[0m
-            [36m</h3>[39m
-            [36m<span>[39m
-              [0mThe current color is: [0m
-              [0mred[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mNext Color[0m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mdata-testid[39m=[32m"colored-box"[39m
-                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: red; display: inline-block; vertical-align: bottom; margin-left: 5px;"[39m
-              [36m/>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mShove Box[0m
-            [36m</h3>[39m
-            [36m<span>[39m
-              [0mThe box is at: [0m
-              [0m10[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mShove the Box[0m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mdata-testid[39m=[32m"moveable-box"[39m
-                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: lightblue; border: 1px solid blue; display: inline-block; vertical-align: bottom; margin-left: 10px;"[39m
-              [36m/>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<span>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mAdd One[0m
-            [36m</button>[39m
-            [0mto [0m
-            [0m0[0m
-            [0m.[0m
-          [36m</span>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mReveal Answer[0m
-            [36m</button>[39m
+            [36m<img[39m
+              [33malt[39m=[32m"Sketch"[39m
+              [33msrc[39m=[32m"sketch.jpg"[39m
+            [36m/>[39m
           [36m</div>[39m
           [36m<hr />[39m
           [36m<div>[39m
@@ -528,89 +166,9 @@ FAIL src/text.test.tsx
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mStart Quiz[0m
+              [0mShow/Hide Previous Tasks[0m
             [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mdisabled[39m=[32m""[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mStop Quiz[0m
-            [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mMulligan[0m
-            [36m</button>[39m
-            [36m<span>[39m
-              [0m4[0m
-            [36m</span>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<span[39m
-              [33mdata-testid[39m=[32m"left-die"[39m
-            [36m>[39m
-              [0m2[0m
-            [36m</span>[39m
-            [36m<span[39m
-              [33mdata-testid[39m=[32m"right-die"[39m
-            [36m>[39m
-              [0m1[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mRoll Left[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mRoll Right[0m
-              [36m</button>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<span />[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mChange Type[0m
-            [36m</button>[39m
-            [36m<div>[39m
-              [36m<span>[39m
-                [0mShort Answer[0m
-              [36m</span>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<span>[39m
-              [0mHoliday: [0m
-              [0m💖[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mAdvance by Alphabet[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mAdvance by Year[0m
-              [36m</button>[39m
-            [36m</div>[39m
+            [36m<hr />[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -633,9 +191,9 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |     100 |    97.77 |     100 |     100 |                   
- src                         |     100 |    98.43 |     100 |     100 |                   
-  App.tsx                    |     100 |      100 |     100 |     100 |                   
+All files                    |   68.45 |    75.71 |   76.78 |   67.63 |                   
+ src                         |   99.32 |    96.96 |   98.59 |   99.29 |                   
+  App.tsx                    |      75 |       50 |   66.66 |      75 | 26                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
   functions.ts               |     100 |      100 |     100 |     100 |                   
   nested.ts                  |     100 |      100 |     100 |     100 |                   
@@ -661,6 +219,14 @@ All files                    |     100 |    97.77 |     100 |     100 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |   69.23 |       85 |   55.55 |   69.23 |                   
+  Quizzer.tsx                |   69.23 |       85 |   55.55 |   69.23 | 35,78-95          
+ src/quizzer/QuizComponents  |       0 |        0 |       0 |       0 |                   
+  editQuiz.tsx               |       0 |      100 |       0 |       0 | 18-278            
+  newQuiz.tsx                |       0 |      100 |       0 |       0 | 16-24             
+  takeQuiz.tsx               |       0 |        0 |       0 |       0 | 16-209            
+ src/quizzer/quizInterface   |       0 |        0 |       0 |       0 |                   
+  quiz.ts                    |       0 |        0 |       0 |       0 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
 
 Summary of all failing tests
@@ -680,490 +246,127 @@ FAIL src/text.test.tsx
           [36m>[39m
             [0mUD CISC275 with React Hooks and TypeScript[0m
           [36m</header>[39m
-          [36m<hr />[39m
           [36m<div>[39m
             [36m<h3>[39m
-              [0mCheck Answer[0m
+              [0mQuizzer[0m
             [36m</h3>[39m
-            [36m<div[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-              [36m>[39m
-                [0mAnswer:[0m
-              [36m</label>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-control"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [0m❌[0m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mGive Attempts[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-                [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-              [36m>[39m
-                [0mAttempts:[0m
-              [36m</label>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-control"[39m
-                [33mtype[39m=[32m"number"[39m
-                [33mvalue[39m=[32m""[39m
-              [36m/>[39m
-            [36m</div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mname[39m=[32m"use"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mUse[0m
-            [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mname[39m=[32m"gain"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mGain[0m
-            [36m</button>[39m
-            [36m<span>[39m
-              [0m3[0m
-            [36m</span>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mEdit Mode[0m
-            [36m</h3>[39m
-            [36m<div[39m
-              [33mclass[39m=[32m"form-check form-switch"[39m
-              [33mstyle[39m=[32m"display: flex; align-items: center; justify-content: center;"[39m
-            [36m>[39m
-              [36m<input[39m
-                [33mclass[39m=[32m"form-check-input"[39m
-                [33mtype[39m=[32m"checkbox"[39m
-              [36m/>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-check-label"[39m
-                [33mtitle[39m=[32m""[39m
-              [36m>[39m
-                [0mEdit mode[0m
-              [36m</label>[39m
-            [36m</div>[39m
+            [36m<hr />[39m
             [36m<div>[39m
               [36m<div>[39m
-                [0mYour Name[0m
-                [0m is [0m
-                [0m[0m
-                [0m a student[0m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mChange Color[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: red;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mchecked[39m=[32m""[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"red"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
+                [36m<h4>[39m
+                  [0mSelect a Quiz:[0m
+                [36m</h4>[39m
+                [36m<select[39m
+                  [33mclass[39m=[32m"form-select"[39m
+                  [33mid[39m=[32m"quizChooser"[39m
                 [36m>[39m
-                  [0mred[0m
-                [36m</label>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"0"[39m
+                  [36m>[39m
+                    [0mQuiz 1: Math[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1"[39m
+                  [36m>[39m
+                    [0mQuiz 2: German[0m
+                  [36m</option>[39m
+                [36m</select>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: blue;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"blue"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mblue[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: green;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"green"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mgreen[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: orange;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"orange"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0morange[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: purple;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"purple"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mpurple[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: cyan;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"cyan"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mcyan[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: magenta;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"magenta"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mmagenta[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: white;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"white"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mwhite[0m
-                [36m</label>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"form-check form-check-inline"[39m
-                [33mstyle[39m=[32m"background-color: black;"[39m
-              [36m>[39m
-                [36m<input[39m
-                  [33mclass[39m=[32m"form-check-input"[39m
-                  [33mname[39m=[32m"color"[39m
-                  [33mtype[39m=[32m"radio"[39m
-                  [33mvalue[39m=[32m"black"[39m
-                [36m/>[39m
-                [36m<label[39m
-                  [33mclass[39m=[32m"form-check-label"[39m
-                  [33mtitle[39m=[32m""[39m
-                [36m>[39m
-                  [0mblack[0m
-                [36m</label>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [0mYou have chosen[0m
+              [36m<p />[39m
+              [0mDescription: [0m
+              [0mSimple math problems.[0m
+              [36m<p />[39m
+              [0mThe quiz has[0m
               [0m [0m
-              [36m<a[39m
-                [33mdata-testid[39m=[32m"colored-box"[39m
-                [33mstyle[39m=[32m"background-color: red;"[39m
-              [36m>[39m
-                [0m [0m
-                [0mred[0m
-              [36m</a>[39m
+              [0m3[0m
             [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mMultiple Choice Question[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [36m<label[39m
-                [33mclass[39m=[32m"form-label"[39m
-              [36m>[39m
-                [0mHow do you feel?[0m
-              [36m</label>[39m
-              [36m<select[39m
-                [33mclass[39m=[32m"form-select"[39m
-              [36m>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"a"[39m
-                [36m>[39m
-                  [0ma[0m
-                [36m</option>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"b"[39m
-                [36m>[39m
-                  [0mb[0m
-                [36m</option>[39m
-                [36m<option[39m
-                  [33mvalue[39m=[32m"c"[39m
-                [36m>[39m
-                  [0mc[0m
-                [36m</option>[39m
-              [36m</select>[39m
-            [36m</div>[39m
-            [0m❌[0m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mDouble Half[0m
-            [36m</h3>[39m
-            [36m<div>[39m
-              [0mThe current value is: [0m
-              [36m<span>[39m
-                [0m10[0m
-              [36m</span>[39m
-            [36m</div>[39m
+            [36m<p />[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mDouble[0m
+              [0mTake Quiz[0m
             [36m</button>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mHalve[0m
+              [0mEdit Quiz[0m
             [36m</button>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mChoose Team[0m
-            [36m</h3>[39m
+            [36m<p>[39m
+              [0mCreate a new Quiz:[0m
+            [36m</p>[39m
+            [36m<button[39m
+              [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [0mNew Quiz[0m
+            [36m</button>[39m
+            [36m<hr />[39m
+            [36m<h4>[39m
+              [0mChecklist and Sketch[0m
+            [36m</h4>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"row"[39m
+              [33mclass[39m=[32m"container"[39m
             [36m>[39m
               [36m<div[39m
-                [33mclass[39m=[32m"col"[39m
+                [33mclass[39m=[32m"row"[39m
               [36m>[39m
                 [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
+                  [33mclass[39m=[32m"col"[39m
                 [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mAlan Turing[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mGrace Hopper[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mAda Lovelace[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mCharles Babbage[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mBarbara Liskov[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-                [36m<div[39m
-                  [33mstyle[39m=[32m"margin-bottom: 4px;"[39m
-                [36m>[39m
-                  [0mAdd[0m
-                  [0m [0m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"btn btn-primary btn-sm"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mMargaret Hamilton[0m
-                  [36m</button>[39m
+                  [36m<ul>[39m
+                    [36m<li>[39m
+                      [0mUsers can see quizzes: Done [0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can select specific quiz: Done [0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mQuestions in quiz can be of at least two types: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers enter or choose an answer for a quiz question and are told if they are correct: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers see total points: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can clear out answers: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can publish or unpulish a question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can filter the questions based on the published status: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can edit the questions: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can add a new quiz question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can delete an existing quiz question: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can reorder quiz questions: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUsers can add a new quiz: Done[0m
+                    [36m</li>[39m
+                    [36m<li>[39m
+                      [0mUseers can delete an existing quiz: Done[0m
+                    [36m</li>[39m
+                  [36m</ul>[39m
                 [36m</div>[39m
               [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"col"[39m
-              [36m>[39m
-                [36m<strong>[39m
-                  [0mTeam:[0m
-                [36m</strong>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mClear Team[0m
-                [36m</button>[39m
-              [36m</div>[39m
             [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mColored Box[0m
-            [36m</h3>[39m
-            [36m<span>[39m
-              [0mThe current color is: [0m
-              [0mred[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mNext Color[0m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mdata-testid[39m=[32m"colored-box"[39m
-                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: red; display: inline-block; vertical-align: bottom; margin-left: 5px;"[39m
-              [36m/>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<h3>[39m
-              [0mShove Box[0m
-            [36m</h3>[39m
-            [36m<span>[39m
-              [0mThe box is at: [0m
-              [0m10[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mShove the Box[0m
-              [36m</button>[39m
-              [36m<div[39m
-                [33mdata-testid[39m=[32m"moveable-box"[39m
-                [33mstyle[39m=[32m"width: 50px; height: 50px; background-color: lightblue; border: 1px solid blue; display: inline-block; vertical-align: bottom; margin-left: 10px;"[39m
-              [36m/>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<span>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mAdd One[0m
-            [36m</button>[39m
-            [0mto [0m
-            [0m0[0m
-            [0m.[0m
-          [36m</span>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mReveal Answer[0m
-            [36m</button>[39m
+            [36m<img[39m
+              [33malt[39m=[32m"Sketch"[39m
+              [33msrc[39m=[32m"sketch.jpg"[39m
+            [36m/>[39m
           [36m</div>[39m
           [36m<hr />[39m
           [36m<div>[39m
@@ -1171,89 +374,9 @@ FAIL src/text.test.tsx
               [33mclass[39m=[32m"btn btn-primary"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
-              [0mStart Quiz[0m
+              [0mShow/Hide Previous Tasks[0m
             [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mdisabled[39m=[32m""[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mStop Quiz[0m
-            [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mMulligan[0m
-            [36m</button>[39m
-            [36m<span>[39m
-              [0m4[0m
-            [36m</span>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<span[39m
-              [33mdata-testid[39m=[32m"left-die"[39m
-            [36m>[39m
-              [0m2[0m
-            [36m</span>[39m
-            [36m<span[39m
-              [33mdata-testid[39m=[32m"right-die"[39m
-            [36m>[39m
-              [0m1[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mRoll Left[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mRoll Right[0m
-              [36m</button>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<span />[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [0mChange Type[0m
-            [36m</button>[39m
-            [36m<div>[39m
-              [36m<span>[39m
-                [0mShort Answer[0m
-              [36m</span>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-          [36m<hr />[39m
-          [36m<div>[39m
-            [36m<span>[39m
-              [0mHoliday: [0m
-              [0m��[0m
-            [36m</span>[39m
-            [36m<div>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mAdvance by Alphabet[0m
-              [36m</button>[39m
-              [36m<button[39m
-                [33mclass[39m=[32m"btn btn-primary"[39m
-                [33mtype[39m=[32m"button"[39m
-              [36m>[39m
-                [0mAdvance by Year[0m
-              [36m</button>[39m
-            [36m</div>[39m
+            [36m<hr />[39m
           [36m</div>[39m
         [36m</div>[39m
       [36m</div>[39m
@@ -1273,8 +396,8 @@ FAIL src/text.test.tsx
       at Object.<anonymous> (src/text.test.tsx:7:26)
 
 
-Test Suites: 1 failed, 20 passed, 21 total
-Tests:       1 failed, 134 passed, 135 total
+Test Suites: 1 failed, 21 passed, 22 total
+Tests:       1 failed, 135 passed, 136 total
 Snapshots:   0 total
-Time:        14.043 s
+Time:        16.305 s
 Ran all test suites.
