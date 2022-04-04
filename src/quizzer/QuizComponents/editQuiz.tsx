@@ -3,7 +3,6 @@ import Form from "react-bootstrap/Form";
 import { Quiz } from "../quizInterface/quiz";
 import { Question } from "../../interfaces/question";
 import { Button } from "react-bootstrap";
-import { addNewQuestion } from "../../nested";
 
 export type QuestionType = "multiple_choice_question" | "short_answer_question";
 
@@ -22,6 +21,30 @@ export function EditQuestion({
     const [questionPublished, setQuestionPublished] = useState<boolean>(
         question.published
     );
+    function moveUp() {
+        const newQuestions: Question[] = [...editQuiz.questions];
+        const newQuestion: Question = { ...question, id: question.id - 1 };
+        const lowerQuestion: Question = {
+            ...editQuiz.questions[question.id - 1],
+            id: question.id + 1
+        };
+        newQuestions.splice(question.id + 1, 1, newQuestion);
+        newQuestions.splice(question.id, 1, lowerQuestion);
+        const newQ: Quiz = { ...editQuiz, questions: newQuestions };
+        setEditQuiz(newQ);
+    }
+    function moveDown() {
+        const newQuestions: Question[] = [...editQuiz.questions];
+        const newQuestion: Question = { ...question, id: question.id + 1 };
+        const upperQuestion: Question = {
+            ...editQuiz.questions[question.id + 1],
+            id: question.id - 1
+        };
+        newQuestions.splice(question.id + 1, 1, newQuestion);
+        newQuestions.splice(question.id, 1, upperQuestion);
+        const newQ: Quiz = { ...editQuiz, questions: newQuestions };
+        setEditQuiz(newQ);
+    }
     function updateQuestionName(event: React.ChangeEvent<HTMLInputElement>) {
         const newQue: Question[] = [...editQuiz.questions];
         const newQuestion: Question = {
@@ -162,6 +185,21 @@ export function EditQuestion({
                 id={question.id.toString()}
                 checked={questionPublished}
             />
+            <Button
+                onClick={moveUp}
+                disabled={question.id === editQuiz.questions[0].id}
+            >
+                Move up
+            </Button>
+            <Button
+                onClick={moveDown}
+                disabled={
+                    question.id ===
+                    editQuiz.questions[editQuiz.questions.length - 1].id
+                }
+            >
+                Move down
+            </Button>
         </div>
     );
 }
@@ -171,12 +209,14 @@ export function EditQuiz({
     quizzes,
     index,
     setQuizzes,
+    setQuiz,
     setView
 }: {
     editQ: Quiz;
     quizzes: Quiz[];
     index: number;
     setQuizzes: (newQuiz: Quiz[]) => void;
+    setQuiz: (newIndex: number) => void;
     setView: (newView: number) => void;
 }): JSX.Element {
     const [editQuiz, setEditQuiz] = useState<Quiz>(editQ);
@@ -187,6 +227,12 @@ export function EditQuiz({
     function saveQuizzes() {
         quizzes.splice(index, 1, editQuiz);
         setQuizzes(quizzes);
+    }
+    function removeQuizzes() {
+        quizzes.splice(index, 1);
+        setQuizzes(quizzes);
+        setQuiz(0);
+        setView(0);
     }
     function addQuestion() {
         const newQuestion: Question = {
@@ -228,6 +274,7 @@ export function EditQuiz({
             <Button onClick={addQuestion}>Add Question</Button>
             <hr></hr>
             <Button onClick={saveQuizzes}>Save</Button>
+            <Button onClick={removeQuizzes}>Remove</Button>
             <Button onClick={() => setView(0)}>Exit</Button>
         </div>
     );

@@ -34,7 +34,6 @@ export function QuizList({
     function updateQuiz(event: React.ChangeEvent<HTMLSelectElement>) {
         setQuiz(parseInt(event.target.value));
     }
-
     return (
         <div>
             <Form.Group controlId="quizChooser">
@@ -50,9 +49,10 @@ export function QuizList({
                 </Form.Select>
             </Form.Group>
             <p></p>
-            Description: {qList[quizChosen].description}
+            Description: {qList.length !== 0 && qList[quizChosen].description}
             <p></p>
-            The quiz has {qList[quizChosen].questions.length}
+            The quiz has{" "}
+            {qList.length !== 0 && qList[quizChosen].questions.length}
         </div>
     );
 }
@@ -74,10 +74,20 @@ export function Quizzer(): JSX.Element {
             )}
             <p></p>
             {view === 0 && (
-                <Button onClick={() => setView(1)}>Take Quiz</Button>
+                <Button
+                    onClick={() => setView(1)}
+                    disabled={quizzes.length === 0}
+                >
+                    Take Quiz
+                </Button>
             )}
             {view === 0 && (
-                <Button onClick={() => setView(2)}>Edit Quiz</Button>
+                <Button
+                    onClick={() => setView(2)}
+                    disabled={quizzes.length === 0}
+                >
+                    Edit Quiz
+                </Button>
             )}
             {view === 0 && <p>Create a new Quiz:</p>}
             {view === 0 && <Button onClick={() => setView(3)}>New Quiz</Button>}
@@ -90,6 +100,7 @@ export function Quizzer(): JSX.Element {
                     quizzes={quizzes}
                     index={quizChosen}
                     setQuizzes={setQuizzes}
+                    setQuiz={setQuiz}
                     setView={setView}
                 />
             )}
@@ -97,6 +108,7 @@ export function Quizzer(): JSX.Element {
                 <NewQuiz
                     quizzes={quizzes}
                     setQuizzes={setQuizzes}
+                    setQuiz={setQuiz}
                     setView={setView}
                 />
             )}
