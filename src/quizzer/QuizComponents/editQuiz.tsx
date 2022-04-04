@@ -24,12 +24,12 @@ export function EditQuestion({
     function moveUp() {
         const newQuestions: Question[] = [...editQuiz.questions];
         const newQuestion: Question = { ...question, id: question.id - 1 };
-        const lowerQuestion: Question = {
+        const upperQuestion: Question = {
             ...editQuiz.questions[question.id - 1],
-            id: question.id + 1
+            id: question.id
         };
-        newQuestions.splice(question.id + 1, 1, newQuestion);
-        newQuestions.splice(question.id, 1, lowerQuestion);
+        newQuestions.splice(question.id - 1, 1, newQuestion);
+        newQuestions.splice(question.id, 1, upperQuestion);
         const newQ: Quiz = { ...editQuiz, questions: newQuestions };
         setEditQuiz(newQ);
     }
@@ -38,7 +38,7 @@ export function EditQuestion({
         const newQuestion: Question = { ...question, id: question.id + 1 };
         const upperQuestion: Question = {
             ...editQuiz.questions[question.id + 1],
-            id: question.id - 1
+            id: question.id
         };
         newQuestions.splice(question.id + 1, 1, newQuestion);
         newQuestions.splice(question.id, 1, upperQuestion);
