@@ -20,7 +20,7 @@ export function NewQuiz({
         description: "",
         questions: []
     };
-    const [editQuiz, setEditQuiz] = useState<Quiz>(newQuiz);
+    const [editQuiz] = useState<Quiz>(newQuiz);
     return (
         <div>
             <hr></hr>

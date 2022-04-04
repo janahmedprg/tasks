@@ -90,7 +90,14 @@ export function Quizzer(): JSX.Element {
                 </Button>
             )}
             {view === 0 && <p>Create a new Quiz:</p>}
-            {view === 0 && <Button onClick={() => setView(3)}>New Quiz</Button>}
+            {view === 0 && (
+                <Button
+                    onClick={() => setView(3)}
+                    data-testid="takeQuiz-button"
+                >
+                    New Quiz
+                </Button>
+            )}
             {view === 1 && (
                 <TakeQuiz takeQuiz={quizzes[quizChosen]} setView={setView} />
             )}

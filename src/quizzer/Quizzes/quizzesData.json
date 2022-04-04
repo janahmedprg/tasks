@@ -72,8 +72,8 @@
                 "published": true
             },
             {
-                "id": 2,
-                "name": "Question 3",
+                "id": 3,
+                "name": "Question 4",
                 "body": "What does 'der Mittwoch' mean in english?",
                 "type": "multiple_choice_question",
                 "options": ["Wednesday", "Saturday", "Monday"],
