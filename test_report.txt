@@ -7,6 +7,35 @@ PASS src/arrays.test.ts
 PASS src/objects.test.ts
 PASS src/components/StartAttempt.test.tsx
 PASS src/components/TwoDice.test.tsx
+PASS src/quizzer/QuizTests/takeQuizTest.test.tsx
+  ● Console
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `TakeQuiz`. See https://reactjs.org/link/warning-keys for more information.
+          at MultipleChoice (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:8:5)
+          at TakeQuiz (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:96:5)
+          at div
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:61:35)
+
+      113 |     }
+      114 |     return (
+    > 115 |         <div>
+          |         ^
+      116 |             <h4>{takeQuiz.title}</h4>
+      117 |             <Form.Check
+      118 |                 type="switch"
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1174:15)
+      at TakeQuiz (src/quizzer/QuizComponents/takeQuiz.tsx:115:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
 PASS src/form-components/MultipleChoiceQuestion.test.tsx
 PASS src/bad-components/ChooseTeam.test.tsx
 PASS src/bad-components/DoubleHalf.test.tsx
@@ -75,6 +104,7 @@ FAIL src/text.test.tsx
             [36m<p />[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mTake Quiz[0m
@@ -90,7 +120,6 @@ FAIL src/text.test.tsx
             [36m</p>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mNew Quiz[0m
@@ -191,7 +220,7 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   68.45 |    75.71 |   76.78 |   67.63 |                   
+All files                    |   77.74 |    93.57 |   85.71 |   77.16 |                   
  src                         |   99.32 |    96.96 |   98.59 |   99.29 |                   
   App.tsx                    |      75 |       50 |   66.66 |      75 | 26                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -219,12 +248,12 @@ All files                    |   68.45 |    75.71 |   76.78 |   67.63 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |   69.23 |       85 |   55.55 |   69.23 |                   
-  Quizzer.tsx                |   69.23 |       85 |   55.55 |   69.23 | 35,78-95          
- src/quizzer/QuizComponents  |       0 |        0 |       0 |       0 |                   
+ src/quizzer                 |   76.92 |       90 |   66.66 |   76.92 |                   
+  Quizzer.tsx                |   76.92 |       90 |   66.66 |   76.92 | 35,87-94          
+ src/quizzer/QuizComponents  |    29.9 |    85.71 |   41.17 |    29.9 |                   
   editQuiz.tsx               |       0 |      100 |       0 |       0 | 18-278            
   newQuiz.tsx                |       0 |      100 |       0 |       0 | 16-24             
-  takeQuiz.tsx               |       0 |        0 |       0 |       0 | 16-209            
+  takeQuiz.tsx               |   94.11 |    85.71 |    87.5 |   94.11 | 184-187           
  src/quizzer/quizInterface   |       0 |        0 |       0 |       0 |                   
   quiz.ts                    |       0 |        0 |       0 |       0 |                   
 -----------------------------|---------|----------|---------|---------|-------------------
@@ -283,6 +312,7 @@ FAIL src/text.test.tsx
             [36m<p />[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mTake Quiz[0m
@@ -298,7 +328,6 @@ FAIL src/text.test.tsx
             [36m</p>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
-              [33mdata-testid[39m=[32m"takeQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mNew Quiz[0m
@@ -396,8 +425,8 @@ FAIL src/text.test.tsx
       at Object.<anonymous> (src/text.test.tsx:7:26)
 
 
-Test Suites: 1 failed, 21 passed, 22 total
-Tests:       1 failed, 135 passed, 136 total
+Test Suites: 1 failed, 22 passed, 23 total
+Tests:       1 failed, 145 passed, 146 total
 Snapshots:   0 total
-Time:        16.305 s
+Time:        13.192 s
 Ran all test suites.
