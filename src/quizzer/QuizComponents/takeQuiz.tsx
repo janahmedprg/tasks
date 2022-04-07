@@ -82,6 +82,7 @@ export function ShortAnswer({
                 value={answer}
                 onChange={updateAnswer}
                 id={question.id.toString()}
+                data-testid={question.id.toString() + "-textbox"}
             />
             <p></p>
             Your answer is:
@@ -116,6 +117,7 @@ export function TakeQuiz({
             <Form.Check
                 type="switch"
                 id="is-publishes-view"
+                data-testid="take-published-switch"
                 label="Only published questions"
                 checked={publishedView}
                 onChange={updatePublishedView}
@@ -204,9 +206,13 @@ export function TakeQuiz({
             )}{" "}
             points
             <p></p>
-            <Button onClick={updateReset}>Reset</Button>
+            <Button onClick={updateReset} data-testid="reset-button">
+                Reset
+            </Button>
             <p></p>
-            <Button onClick={() => setView(0)}>Exit</Button>
+            <Button onClick={() => setView(0)} data-testid="take-exit-button">
+                Exit
+            </Button>
         </div>
     );
 }
