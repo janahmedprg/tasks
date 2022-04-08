@@ -96,8 +96,8 @@ describe("TakeQuiz Tests", () => {
         exitButton.click();
         expect(screen.getByText("Select a Quiz:")).toBeInTheDocument();
     });
-    test("Test that the show publish questions checkbox works", () => {
-        const Switch = screen.getByTestId("take-published-switch");
+    test("Test that the show publish switch works", () => {
+        const Switch = screen.getByTestId("0-is-published");
 
         Switch.click();
         expect(screen.queryByText("Question 3")).not.toBeInTheDocument();

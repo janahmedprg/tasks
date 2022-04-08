@@ -126,35 +126,39 @@ export function EditQuestion({
             <hr></hr>
             <Form.Label>Question Name:</Form.Label>
             <Form.Control
-                key={editQuiz.id.toString()}
+                key={question.id.toString() + "-name"}
                 value={question.name}
                 onChange={updateQuestionName}
-                id={editQuiz.id.toString()}
+                id={question.id.toString() + "-name"}
+                data-testid={question.id.toString() + "-name"}
             />
             <Form.Label>Question Body:</Form.Label>
             <Form.Control
-                key={editQuiz.id.toString()}
+                key={question.id.toString() + "-body"}
                 value={question.body}
                 onChange={updateQuestionBody}
-                id={editQuiz.id.toString()}
+                id={question.id.toString() + "-body"}
+                data-testid={question.id.toString() + "-body"}
             />
             <Form.Check
-                key={question.id.toString()}
+                key={question.id.toString() + "-type-multiple"}
                 type="radio"
                 onChange={updateQuestionType}
                 label="Multiple choice"
                 value="multiple_choice_question"
-                id={question.id.toString()}
+                id={question.id.toString() + "-type-multiple"}
                 checked={questionType === "multiple_choice_question"}
+                data-testid={question.id.toString() + "-type-multiple"}
             />
             <Form.Check
-                key={question.id.toString()}
+                key={question.id.toString() + "-type-short"}
                 type="radio"
                 onChange={updateQuestionType}
                 label="Short answer"
                 value="short_answer_question"
-                id={question.id.toString()}
+                id={question.id.toString() + "-type-short"}
                 checked={questionType === "short_answer_question"}
+                data-testid={question.id.toString() + "-type-short"}
             />
             <Form.Label>Question Options:</Form.Label>
             <Form.Control
@@ -162,27 +166,31 @@ export function EditQuestion({
                 rows={3}
                 value={question.options}
                 onChange={updateQuestionOptions}
+                data-testid={question.id.toString() + "-options"}
             />
             <Form.Label>Question Expected:</Form.Label>
             <Form.Control
-                key={editQuiz.id.toString()}
+                key={question.id.toString() + "-expected"}
                 value={question.expected}
                 onChange={updateQuestionExpected}
                 id={editQuiz.id.toString()}
+                data-testid={question.id.toString() + "-expected"}
             />
             <Form.Label>Question Points:</Form.Label>
             <Form.Control
-                key={editQuiz.id.toString()}
+                key={question.id.toString() + "-points"}
                 value={question.points}
                 onChange={updateQuestionPoints}
-                id={editQuiz.id.toString()}
+                id={question.id.toString() + "-points"}
+                data-testid={question.id.toString() + "-points"}
             />
             <Form.Check
-                key={question.id.toString()}
+                key={question.id.toString() + "-published"}
                 type="switch"
                 onChange={updateQuestionPublished}
                 label="Published"
-                id={question.id.toString()}
+                id={question.id.toString() + "-published"}
+                data-testid={question.id.toString() + "-published"}
                 checked={questionPublished}
             />
             <Button
@@ -259,6 +267,7 @@ export function EditQuiz({
                 value={editQuiz.title}
                 onChange={updateQuizTitle}
                 id={editQuiz.id.toString()}
+                data-testid={editQ.id.toString() + "-quiz"}
             />
             {editQuiz.questions.map(
                 (question: Question): JSX.Element => (
@@ -271,11 +280,19 @@ export function EditQuiz({
                 )
             )}
             <hr></hr>
-            <Button onClick={addQuestion}>Add Question</Button>
+            <Button onClick={addQuestion} data-testid="edit-add-button">
+                Add Question
+            </Button>
             <hr></hr>
-            <Button onClick={saveQuizzes}>Save</Button>
-            <Button onClick={removeQuizzes}>Remove</Button>
-            <Button onClick={() => setView(0)}>Exit</Button>
+            <Button onClick={saveQuizzes} data-testid="edit-save-button">
+                Save
+            </Button>
+            <Button onClick={removeQuizzes} data-testid="edit-remove-button">
+                Remove
+            </Button>
+            <Button onClick={() => setView(0)} data-testid="edit-exit-button">
+                Exit
+            </Button>
         </div>
     );
 }

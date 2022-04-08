@@ -41,7 +41,11 @@ export function QuizList({
                 <Form.Select value={quizChosen} onChange={updateQuiz}>
                     {qList.map(
                         (q: Quiz): JSX.Element => (
-                            <option key={q.id} value={q.id}>
+                            <option
+                                key={q.id.toString() + "-quiz"}
+                                value={q.id}
+                                data-testid={q.id.toString() + "-quiz"}
+                            >
                                 {q.title}
                             </option>
                         )
@@ -86,6 +90,7 @@ export function Quizzer(): JSX.Element {
                 <Button
                     onClick={() => setView(2)}
                     disabled={quizzes.length === 0}
+                    data-testid="editQuiz-button"
                 >
                     Edit Quiz
                 </Button>
