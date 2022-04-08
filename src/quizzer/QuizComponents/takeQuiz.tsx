@@ -78,7 +78,7 @@ export function ShortAnswer({
             <h5>{question.name}</h5>
             {question.body}
             <Form.Control
-                key={question.id.toString()}
+                key={question.id.toString() + "-textbox"}
                 value={answer}
                 onChange={updateAnswer}
                 id={question.id.toString()}
@@ -116,8 +116,8 @@ export function TakeQuiz({
             <h4>{takeQuiz.title}</h4>
             <Form.Check
                 type="switch"
-                id="is-publishes-view"
-                data-testid="take-published-switch"
+                id={takeQuiz.id.toString() + "-is-published"}
+                data-testid={takeQuiz.id.toString() + "-is-published"}
                 label="Only published questions"
                 checked={publishedView}
                 onChange={updatePublishedView}
