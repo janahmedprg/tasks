@@ -17,7 +17,56 @@ PASS src/quizzer/QuizTests/takeQuizTest.test.tsx
           at MultipleChoice (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:8:5)
           at TakeQuiz (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:96:5)
           at div
-          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:61:35)
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:65:35)
+
+      113 |     }
+      114 |     return (
+    > 115 |         <div>
+          |         ^
+      116 |             <h4>{takeQuiz.title}</h4>
+      117 |             <Form.Check
+      118 |                 type="switch"
+
+      at printWarning (node_modules/react/cjs/react-jsx-dev-runtime.development.js:117:30)
+      at error (node_modules/react/cjs/react-jsx-dev-runtime.development.js:93:5)
+      at validateExplicitKey (node_modules/react/cjs/react-jsx-dev-runtime.development.js:986:5)
+      at validateChildKeys (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1013:11)
+      at jsxWithValidation (node_modules/react/cjs/react-jsx-dev-runtime.development.js:1174:15)
+      at TakeQuiz (src/quizzer/QuizComponents/takeQuiz.tsx:115:9)
+      at renderWithHooks (node_modules/react-dom/cjs/react-dom.development.js:14985:18)
+      at mountIndeterminateComponent (node_modules/react-dom/cjs/react-dom.development.js:17811:13)
+
+PASS src/quizzer/QuizTests/editQuizTest.test.tsx
+  ● Console
+
+    console.error
+      Warning: Received NaN for the `value` attribute. If this is expected, cast the value to a string.
+          at input
+          at /home/runner/work/tasks/tasks/node_modules/react-bootstrap/cjs/FormControl.js:27:3
+          at div
+          at EditQuestion (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/editQuiz.tsx:10:5)
+          at div
+          at EditQuiz (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/editQuiz.tsx:216:5)
+          at div
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:65:35)
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateProperty$1 (node_modules/react-dom/cjs/react-dom.development.js:3492:7)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom.development.js:3559:21)
+      at validateProperties$2 (node_modules/react-dom/cjs/react-dom.development.js:3583:3)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom.development.js:8765:5)
+      at diffProperties (node_modules/react-dom/cjs/react-dom.development.js:9172:5)
+      at prepareUpdate (node_modules/react-dom/cjs/react-dom.development.js:10215:10)
+
+    console.error
+      Warning: Each child in a list should have a unique "key" prop.
+      
+      Check the render method of `TakeQuiz`. See https://reactjs.org/link/warning-keys for more information.
+          at ShortAnswer (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:55:5)
+          at TakeQuiz (/home/runner/work/tasks/tasks/src/quizzer/QuizComponents/takeQuiz.tsx:96:5)
+          at div
+          at Quizzer (/home/runner/work/tasks/tasks/src/quizzer/Quizzer.tsx:65:35)
 
       113 |     }
       114 |     return (
@@ -82,11 +131,13 @@ FAIL src/text.test.tsx
                   [33mid[39m=[32m"quizChooser"[39m
                 [36m>[39m
                   [36m<option[39m
+                    [33mdata-testid[39m=[32m"0-quiz"[39m
                     [33mvalue[39m=[32m"0"[39m
                   [36m>[39m
                     [0mQuiz 1: Math[0m
                   [36m</option>[39m
                   [36m<option[39m
+                    [33mdata-testid[39m=[32m"1-quiz"[39m
                     [33mvalue[39m=[32m"1"[39m
                   [36m>[39m
                     [0mQuiz 2: German[0m
@@ -111,6 +162,7 @@ FAIL src/text.test.tsx
             [36m</button>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"editQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mEdit Quiz[0m
@@ -220,7 +272,7 @@ PASS src/App.test.tsx
 -----------------------------|---------|----------|---------|---------|-------------------
 File                         | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -----------------------------|---------|----------|---------|---------|-------------------
-All files                    |   77.74 |    93.57 |   85.71 |   77.16 |                   
+All files                    |   92.67 |    94.28 |   94.64 |   92.48 |                   
  src                         |   99.32 |    96.96 |   98.59 |   99.29 |                   
   App.tsx                    |      75 |       50 |   66.66 |      75 | 26                
   arrays.ts                  |     100 |      100 |     100 |     100 |                   
@@ -248,10 +300,10 @@ All files                    |   77.74 |    93.57 |   85.71 |   77.16 |
  src/interfaces              |       0 |        0 |       0 |       0 |                   
   answer.ts                  |       0 |        0 |       0 |       0 |                   
   question.ts                |       0 |        0 |       0 |       0 |                   
- src/quizzer                 |   76.92 |       90 |   66.66 |   76.92 |                   
-  Quizzer.tsx                |   76.92 |       90 |   66.66 |   76.92 | 35,87-94          
- src/quizzer/QuizComponents  |    29.9 |    85.71 |   41.17 |    29.9 |                   
-  editQuiz.tsx               |       0 |      100 |       0 |       0 | 18-278            
+ src/quizzer                 |   84.61 |       95 |   77.77 |   84.61 |                   
+  Quizzer.tsx                |   84.61 |       95 |   77.77 |   84.61 | 35,99             
+ src/quizzer/QuizComponents  |    78.5 |    85.71 |   82.35 |    78.5 |                   
+  editQuiz.tsx               |   75.36 |      100 |   82.35 |   75.36 | 25-46,246-260     
   newQuiz.tsx                |       0 |      100 |       0 |       0 | 16-24             
   takeQuiz.tsx               |   94.11 |    85.71 |    87.5 |   94.11 | 184-187           
  src/quizzer/quizInterface   |       0 |        0 |       0 |       0 |                   
@@ -290,11 +342,13 @@ FAIL src/text.test.tsx
                   [33mid[39m=[32m"quizChooser"[39m
                 [36m>[39m
                   [36m<option[39m
+                    [33mdata-testid[39m=[32m"0-quiz"[39m
                     [33mvalue[39m=[32m"0"[39m
                   [36m>[39m
                     [0mQuiz 1: Math[0m
                   [36m</option>[39m
                   [36m<option[39m
+                    [33mdata-testid[39m=[32m"1-quiz"[39m
                     [33mvalue[39m=[32m"1"[39m
                   [36m>[39m
                     [0mQuiz 2: German[0m
@@ -319,6 +373,7 @@ FAIL src/text.test.tsx
             [36m</button>[39m
             [36m<button[39m
               [33mclass[39m=[32m"btn btn-primary"[39m
+              [33mdata-testid[39m=[32m"editQuiz-button"[39m
               [33mtype[39m=[32m"button"[39m
             [36m>[39m
               [0mEdit Quiz[0m
@@ -425,8 +480,8 @@ FAIL src/text.test.tsx
       at Object.<anonymous> (src/text.test.tsx:7:26)
 
 
-Test Suites: 1 failed, 22 passed, 23 total
-Tests:       1 failed, 145 passed, 146 total
+Test Suites: 1 failed, 23 passed, 24 total
+Tests:       1 failed, 149 passed, 150 total
 Snapshots:   0 total
-Time:        13.192 s
+Time:        15.14 s
 Ran all test suites.
